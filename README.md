@@ -8,7 +8,7 @@ Tutorial project. In-browser presentation.
 - vanilla JavaScript
 
 ## Deployed project URL
-https://e-pol.github.io/
+http://e-pol.github.io/ep_tutorial_presentation/
 
 ## Releases:
 [ v0.0.1 ] ( https://github.com/e-pol/ep_tutorial_presentation/releases )
