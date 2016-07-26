@@ -61,19 +61,19 @@
   
   showPrevSlide = function () {
     var 
-      slideElems, curr_index, prop_index, slides_len,
+      slide_elems, curr_index, prop_index, slides_len,
       prop_active_slide, active_slide_class;
 
-    slideElems = elemMap.slides;
-    slides_len = slideElems.length;
-    curr_index = getIndexOf( slideElems, stateMap.active_slide );
+    slide_elems = elemMap.slides;
+    slides_len = slide_elems.length;
+    curr_index = getIndexOf( slide_elems, stateMap.active_slide );
     active_slide_class = configMap.elem_class_list.active_slide;
 
     if ( curr_index === 0 ) { return false; }
 
     prop_index = curr_index - 1;
     removeClass( stateMap.active_slide, active_slide_class );
-    prop_active_slide = slideElems[ prop_index ];
+    prop_active_slide = slide_elems[ prop_index ];
     addClass( prop_active_slide, active_slide_class );
 
     setSlideNumber( prop_index + 1, slides_len );
@@ -83,19 +83,19 @@
   
   showNextSlide = function () {
     var 
-      slideElems, curr_index, prop_index, slides_len, 
+      slide_elems, curr_index, prop_index, slides_len, 
       prop_active_slide, active_slide_class;
 
-    slideElems = elemMap.slides;
-    slides_len = slideElems.length;
-    curr_index = getIndexOf( slideElems, stateMap.active_slide );
+    slide_elems = elemMap.slides;
+    slides_len = slide_elems.length;
+    curr_index = getIndexOf( slide_elems, stateMap.active_slide );
     active_slide_class = configMap.elem_class_list.active_slide;
 
     if ( curr_index === slides_len - 1 ) { return false; }
 
     prop_index = curr_index + 1;
     removeClass( stateMap.active_slide, active_slide_class );
-    prop_active_slide = slideElems[ prop_index ];
+    prop_active_slide = slide_elems[ prop_index ];
     addClass( prop_active_slide, active_slide_class );
 
     setSlideNumber( prop_index + 1, slides_len );
@@ -127,11 +127,11 @@
     evt.preventDefault();
     switch ( evt.keyCode ) {
       case 37:
-      showPrevSlide();
-      break;
-    case 39:
-      showNextSlide();
-      break;
+        showPrevSlide();
+        break;
+      case 39:
+        showNextSlide();
+        break;
     }
   }
   // -------------------- END EVENT METHODS -----------------------
